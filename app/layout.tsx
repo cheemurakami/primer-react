@@ -1,8 +1,6 @@
 import { BaseStyles, ThemeProvider } from "@primer/react";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import StyledComponentsRegistry from "../lib/registry";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,13 +14,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <link
           rel="stylesheet"
           href="https://unpkg.com/@primer/css/dist/primer.css"
         ></link>
         <ThemeProvider>
-          <BaseStyles>{children}</BaseStyles>
+          <StyledComponentsRegistry>
+            <BaseStyles>{children}</BaseStyles>
+          </StyledComponentsRegistry>
         </ThemeProvider>
       </body>
     </html>

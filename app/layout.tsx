@@ -1,6 +1,7 @@
 import { BaseStyles, ThemeProvider } from "@primer/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,6 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/@primer/css/dist/primer.css"
+        ></link>
         <ThemeProvider>
           <BaseStyles>{children}</BaseStyles>
         </ThemeProvider>

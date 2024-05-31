@@ -1,0 +1,14 @@
+[
+  {
+    "repoName": "honma-api",
+    "public": true,
+    "description": "A rails API for the honma dialect app",
+    "language": "Ruby"
+  },
+  {
+    "repoName": "crystal_swap",
+    "public": true,
+    "description": "A place where people can trade crystals",
+    "language": "Ruby"
+  }
+]
